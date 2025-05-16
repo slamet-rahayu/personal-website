@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Personal Website - Glassmorphism</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="appbar d-none-desktop" id="appbar">
+    <div class="appbar-profile">
+      <img src="https://i.pravatar.cc/100" alt="Foto Profil" />
+      <div>
+        <h2>Slamet Rahayu</h2>
+        <p>Frontend Developer</p>
+      </div>
+    </div>
+    <button type="button" id="openSidebar">
+      <img width="25" height="25" src="./svg/triangle-down-svgrepo-com.svg" alt="">
+    </button>
+  </div>
+  <div class="wrapper">
+    <div class="sidebar d-none-mobile" id="sidebar">
+      <div class="profile">
+        <button type="button" class="close-btn d-none-desktop" id="closeSidebar">
+          <img src="./svg/cross-svgrepo-com.svg" width="20" height="20" />
+        </button>
+        <img src="https://i.pravatar.cc/100" alt="Foto Profil" />
+        <h1>Slamet Rahayu</h1>
+        <p>Frontend Developer</p>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <div class="music">
+        <div class="album-art">
+          <img src="./images/bunga-maaf-cover.jpg" alt="Album Cover" />
+        </div>
+        <div class="track-info">
+          <h3>Bunga Maaf</h3>
+          <p>The Lantis</p>
+          <audio id="audioPlayer" src="./audio/The Lantis - Bunga Maaf.mp3"></audio>
+        </div>
+        <div class="slider_container">
+          <div class="current-time" id="currentTime">00:00</div>
+          <input id="seek_slider" type="range" min="1" max="100"
+            value="0" class="seek_slider">
+          <div class="total-duration" id="duration">00:00</div>
+        </div>
+        <div class="music-control">
+          <img src="./svg/previous-svgrepo-com.svg" alt="" srcset=""></img>
+          <button id="playButton" onclick="togglePlay()">
+            <img id="playBtn" src="./svg/play-svgrepo-com.svg" alt="" srcset=""></img>
+          </button>
+          <img src="./svg/next-svgrepo-com.svg" alt="" srcset=""></img>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="container">
+      <div class="hello section" id="home">
+        <h1>Hello, Welcome to My Website!</h1>
+        <p>I'm glad you're here. This is my personal space where I share my work, experiences and thoughts about technology and development.</p>
+        <p>Feel free to browse around and learn more about my projects and skills.</p>
+        <a href="#contact">Get In Touch</a>
+      </div>
+      <div class="about section" id="about">
+        <h2>About Me</h2>
+        <div>
+          <p>I'm a passionate fullstack developer with experience in building web applications using modern technologies. I love coding and always eager to learn new things.</p>
+        </div>
+      </div>
+      <div class="tech-stack section">
+        <h2>My Tech Stack</h2>
+        <div class="tech-stack-cards">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="jquery-3.7.1.slim.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

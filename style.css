@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #43cea2, #185a9d);  
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin: 0.5rem 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  width: 24%;
+  margin-bottom: 1.2rem;
+}
+
+.glass-card img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.glass-card h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.glass-card p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.glass-card a,
+.hello a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  width: 150px;
+}
+
+.glass-card a:hover,
+.hello a:hover {
+  background: linear-gradient(135deg, #92fe9d, #00c9ff);
+  transform: scale(1.05);
+}
+
+.container {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-behavior: smooth;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.profile h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile p {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.hello {
+  color: #fff;
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.about div {
+  width: 70%;
+}
+
+.tech-stack {
+  color: white;
+}
+
+.tech-stack-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tech-stack h2 {
+  margin-bottom: 1rem;
+}
+
+
+.music {
+  margin-top: 1.2rem;
+}
+
+.music-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  margin-top: 0.5rem;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider {
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: white;
+  opacity: 0.8;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.album-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-art img {
+  border-radius: 16px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.track-info {
+  margin-top: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-info h3 {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.track-info p {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+}
+
+.appbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(67, 206, 162, 0.2), rgba(24, 90, 157, 0.2));
+  color: #fff;
+}
+
+.appbar button {
+  display: flex;
+  align-items: center;
+}
+
+.appbar-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appbar-profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.appbar-profile > div {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.appbar-profile h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .d-none-desktop {
+    display: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    overflow: hidden;
+  }
+  .d-none-mobile {
+    display: none;
+  }
+  .container {
+    margin-top: 0;
+    padding: 1.1rem;
+    padding-bottom: 120px;
+  }
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    border-right: none;
+  }
+
+  .sidebar ul li a {
+    font-size: 1rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .hello {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about {
+    margin-bottom: 1.5rem;
+  }
+
+  .about div {
+    width: 100%;
+  }
+
+  .music {
+    margin-top: 2.5rem;
+  }
+
+  .glass-card {
+    width: 48%;
+  }
+
+  .glass-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar h2 {
+    font-size: 1.2rem;
+  }
+
+  .seek_slider {
+    width: 100%;
+  }
+
+  .album-art img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .track-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .track-info p {
+    font-size: 1rem;
+  }
+}
